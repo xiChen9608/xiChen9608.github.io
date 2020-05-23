@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Chen Xi's Home</title>
+    <link rel="icon" href="image/whale.ico" type="image/vnd.microsoft.icon" />
     <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-<div id="nav">
-    <ul>
-        <li><a href="#" class="a">Home</a></li>
-        <li><a href="#" class="a">Publication</a></li>
+<body style="cursor: pointer">
+<div class="nav-box">
+    <ul id="nav">
+        <li>Home</li>
+        <li>Publication</li>
         <li><a href="#" class="a">Project</a></li>
         <li><a href="#" class="a">Blog</a></li>
         <li><a href="#" class="a">Contact</a></li>
     </ul>
 </div>
-<div id="P_detail">
-    <div id="head_img"> <img src="image/img.jpg" /></div>
-    <h2>Chen Xi (陈茜)</h2>
-    <h4 style="color: darkgrey">Master student</h4>
-    <a href="http://www.siat.ac.cn/">Shenzhen Institutes of Advanced Technology Chinese Academy of Sciences</a>
-    <div id="bottom_img">
-        <img src="image/email.png" />
-        <img src="image/github.png" />
-    </div>
+<div  id="main">
+    <iframe src="home/home.html" frameBorder="0" width="100%" scrolling="NO" height="100%" margin="0" padding="0px">
+    </iframe>
 </div>
-<div id="content">
 
-
-</div>
 </body>
-<script>
-    // console.log($('#P_detail'))
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    let home=document.querySelectorAll("#nav>li");
+    let iframe=document.querySelector("#main>iframe");
+    home[0].style.fontWeight="bolder";
+    home[1].onclick = function(){
+        iframe.src = "publication/publication.html";
+        home[1].style.fontWeight="bolder";
+        for (let i=0;i<5;i++){
+            if(i===1) continue;
+            home[i].style.fontWeight="normal";
+        }
+    };
+    home[0].onclick = function(){
+        iframe.src = "home/home.html";
+        home[0].style.fontWeight="bolder";
+        for (let i=0;i<5;i++){
+            if(i===0) continue;
+            home[i].style.fontWeight="normal";
+        }
+    }
 </script>
 </html>

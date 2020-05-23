@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chen Xi's Home</title>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="font-size: 18px;cursor: pointer">
+<div id="P_detail">
+    <div id="head_img"> <img src="../image/img.jpg" /></div>
+    <h3>Xi Chen(陈茜)</h3>
+    <p style="color: darkgrey">Master student</p>
+    <a id="school" href="#">Shenzhen Institutes of Advanced Technology Chinese Academy of Sciences</a>
+    <div id="bottom_img">
+        <img id="BI_1" src="../image/github.png" />
+    </div>
+</div>
+<div id="content">
+    <h3>About me</h3>
+    <p>Xi Chen, a master student in the Department of Computer Technology, Shenzhen Institutes of Advanced
+        Technology Chinese Academy of Science. I am working at  <a href="#" id="ML">Multimedia Lab</a>, under the supervision of <a href="#" id="ZW">Pro.Wei Zeng</a></p>
+
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+    document.getElementById('school').onclick=function(){
+        window.open('http://www.siat.ac.cn/');
+    };
+    document.getElementById('BI_1').onclick=function(){
+        window.open('https://github.com/xiChen9608?tab=repositories');
+    };
+    document.getElementById('ML').onclick=function(){
+        window.open('http://mmlab.siat.ac.cn/');
+    };
+    document.getElementById('ZW').onclick=function(){
+        window.open('https://zeng-wei.com/');
+    }
+</script>
+</html>
