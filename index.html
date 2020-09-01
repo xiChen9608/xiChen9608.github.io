@@ -32,7 +32,7 @@
             Technology Chinese Academy of Sciences. I am working at  <a href="#" id="ML">Multimedia Lab</a>, under the supervision of <a href="#" id="ZW">Prof.Wei Zeng</a></p>
         <h4>Recent News</h4>
         <ul>
-            <li style="list-style: square;">Aug. '20:  The InfoVis paper on multiple views visualization got accepted by IEEE VIS and selected for publication in IEEE TVCG. Check our <a href="#" id="paper1">homepage</a></li>
+            <li style="list-style: square;">Aug. '20:  The InfoVis paper on multiple views visualization got accepted by IEEE VIS and selected for publication in IEEE TVCG. Check our <a href="#" id="paper1">homepage</a>.</li>
             <li style="list-style: square;">July. '20: Our paper 'VIStory: Interactive Storyboard for Exploring Visual Information in Scientific Publications' (an extension of the VINCI'19 best paper) got accepted by Journal of Visualization.</li>
             <li style="list-style: square;">Sept. '19: Our paper 'VIStory' got 'Best Paper Award' from VINCI 19.</li>
         </ul>
@@ -115,24 +115,24 @@
     document.getElementById('Composition_Homepage').onclick=function(){
         window.open('https://mvlandscape.bitbucket.io/');
     };
-    // let home=document.querySelectorAll("#nav>li");
+    let home=document.querySelectorAll("#nav>li");
     // let iframe=document.querySelector("#main>iframe");
-    // home[0].style.fontWeight="bolder";
-    // home[1].onclick = function(){
-    //     iframe.src = "publication/publication.html";
-    //     home[1].style.fontWeight="bolder";
-    //     for (let i=0;i<5;i++){
-    //         if(i===1) continue;
-    //         home[i].style.fontWeight="normal";
-    //     }
-    // };
-    // home[0].onclick = function(){
-    //     iframe.src = "home/home.html";
-    //     home[0].style.fontWeight="bolder";
-    //     for (let i=0;i<5;i++){
-    //         if(i===0) continue;
-    //         home[i].style.fontWeight="normal";
-    //     }
-    // }
+    home[0].style.fontWeight="bolder";
+    home[1].onclick = function(){
+        // iframe.src = "publication/publication.html";
+        home[1].style.fontWeight="bolder";
+        for (let i=0;i<5;i++){
+            if(i===1) continue;
+            home[i].style.fontWeight="normal";
+        }
+    };
+    home[0].onclick = function(){
+        // iframe.src = "home/home.html";
+        home[0].style.fontWeight="bolder";
+        for (let i=0;i<5;i++){
+            if(i===0) continue;
+            home[i].style.fontWeight="normal";
+        }
+    }
 </script>
 </html>
