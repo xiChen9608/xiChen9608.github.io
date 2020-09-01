@@ -9,39 +9,130 @@
 <body style="cursor: pointer">
 <div class="nav-box">
     <ul id="nav">
-        <li>Home</li>
-        <li>Publication</li>
-        <li><a href="#" class="a">Project</a></li>
-        <li><a href="#" class="a">Blog</a></li>
-        <li><a href="#" class="a">Contact</a></li>
+        <li><a href="#content" class="a">Home</a></li>
+        <li><a href="#publication" class="a">Publication</a></li>
+<!--        <li><a href="#" class="a">Project</a></li>-->
+<!--        <li><a href="#" class="a">Blog</a></li>-->
+<!--        <li><a href="#contact" class="a">Contact</a></li>-->
     </ul>
 </div>
 <div  id="main">
-    <iframe src="home/home.html" frameBorder="0" width="90%" scrolling="NO" height="100%" margin="0" padding="0px">
-    </iframe>
+    <div id="P_detail">
+        <div id="head_img"> <img src="image/img.jpg" /></div>
+        <h3>Xi Chen(陈茜)</h3>
+        <p style="color: darkgrey">Master student</p>
+        <a id="school" href="#">Shenzhen Institutes of Advanced Technology Chinese Academy of Sciences</a>
+        <div id="bottom_img">
+            <img id="BI_1" src="image/github.png" />
+        </div>
+    </div>
+    <div id="content">
+        <h3>About me</h3>
+        <p>Xi Chen, a master student in the Department of Computer Technology, Shenzhen Institutes of Advanced
+            Technology Chinese Academy of Sciences. I am working at  <a href="#" id="ML">Multimedia Lab</a>, under the supervision of <a href="#" id="ZW">Prof.Wei Zeng</a></p>
+        <h4>Recent News</h4>
+        <ul>
+            <li style="list-style: square;">Aug. '20:  The InfoVis paper on multiple views visualization got accepted by IEEE VIS and selected for publication in IEEE TVCG. Check our <a href="#" id="paper1">homepage</a></li>
+            <li style="list-style: square;">July. '20: Our paper 'VIStory: Interactive Storyboard for Exploring Visual Information in Scientific Publications' (an extension of the VINCI'19 best paper) got accepted by Journal of Visualization.</li>
+            <li style="list-style: square;">Sept. '19: Our paper 'VIStory' got 'Best Paper Award' from VINCI 19.</li>
+        </ul>
+    </div>
+    <div id="publication">
+        <h3>Publication</h3>
+        <table cellspacing="15" align="center">
+            <tr>
+                <td>
+                    <img class="image" src="image/paper/multiple_view_visualization.png">
+                </td>
+                <td>
+                    <b>Composition and Configuration Patterns in Multiple-View Visualizations</b>
+                    <br>
+                    <b>Xi Chen</b>, Wei Zeng (Corresponding Author), Yanna Lin, Hayder Mahdi Al-maneea, Jonathan C Roberts, Remco Chang
+                    <br>
+                    <em>IEEE Transactions on Visualization and Computer Graphics (Proc. IEEE InfoVis 2020), Accepted</em>
+                    <br>
+                    [<a href="#" id="Composition">Paper</a>]
+                    [<a href="#" id="Composition_Homepage">Homepage</a>]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="image" src="image/paper/2019_Vistory.jpg">
+                </td>
+                <td>
+                    <b>VIStory:Interactive Storyboard for Exploring Visual Information in Scientific Publication</b>
+                    <br>
+                    Ao Dong, Wei Zeng, <b>Xi Chen</b>, Zhanglin Cheng
+                    <br>
+                    <em>Proceeding of the ACM Symposium on Visual Information Communication and Interaction
+                        (VINCI)</em>
+                    ,12:1-8,2019.
+                    <b>
+                        <font color="red">Best Paper</font>
+                    </b>
+                    <br>
+                    [<a href="#" id="VIStory">Paper</a>]
+<!--                    [<a href="#" id="VIStory_Homepage">Homepage</a>]-->
+                </td>
+            </tr>
+        </table>
+    </div>
+<!--    <div id="contact">-->
+<!--        <h3>Contact</h3>-->
+<!--    </div>-->
+<!--    <iframe src="home/home.html" frameBorder="0" width="90%" scrolling="NO" height="100%" margin="0" padding="0px">-->
+<!--    </iframe>-->
 </div>
 
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
-    let home=document.querySelectorAll("#nav>li");
-    let iframe=document.querySelector("#main>iframe");
-    home[0].style.fontWeight="bolder";
-    home[1].onclick = function(){
-        iframe.src = "publication/publication.html";
-        home[1].style.fontWeight="bolder";
-        for (let i=0;i<5;i++){
-            if(i===1) continue;
-            home[i].style.fontWeight="normal";
-        }
+    document.getElementById('school').onclick=function(){
+        window.open('http://www.siat.ac.cn/');
     };
-    home[0].onclick = function(){
-        iframe.src = "home/home.html";
-        home[0].style.fontWeight="bolder";
-        for (let i=0;i<5;i++){
-            if(i===0) continue;
-            home[i].style.fontWeight="normal";
-        }
+    document.getElementById('BI_1').onclick=function(){
+        window.open('https://github.com/xiChen9608?tab=repositories');
+    };
+    document.getElementById('ML').onclick=function(){
+        window.open('http://mmlab.siat.ac.cn/');
+    };
+    document.getElementById('ZW').onclick=function(){
+        window.open('https://zeng-wei.com/');
     }
+    document.getElementById('paper1').onclick=function(){
+        window.open('https://mvlandscape.bitbucket.io/');
+    }
+
+    document.getElementById('VIStory').onclick=function(){
+        window.open('papers/2019_VIStory.pdf');
+    };
+    // document.getElementById('VIStory_Homepage').onclick=function(){
+    //     window.open('https://dongoa.github.io/projects/VIStory/index.html');
+    // };
+    document.getElementById('Composition').onclick=function(){
+        window.open('https://arxiv.org/abs/2007.15407');
+    };
+    document.getElementById('Composition_Homepage').onclick=function(){
+        window.open('https://mvlandscape.bitbucket.io/');
+    };
+    // let home=document.querySelectorAll("#nav>li");
+    // let iframe=document.querySelector("#main>iframe");
+    // home[0].style.fontWeight="bolder";
+    // home[1].onclick = function(){
+    //     iframe.src = "publication/publication.html";
+    //     home[1].style.fontWeight="bolder";
+    //     for (let i=0;i<5;i++){
+    //         if(i===1) continue;
+    //         home[i].style.fontWeight="normal";
+    //     }
+    // };
+    // home[0].onclick = function(){
+    //     iframe.src = "home/home.html";
+    //     home[0].style.fontWeight="bolder";
+    //     for (let i=0;i<5;i++){
+    //         if(i===0) continue;
+    //         home[i].style.fontWeight="normal";
+    //     }
+    // }
 </script>
 </html>
